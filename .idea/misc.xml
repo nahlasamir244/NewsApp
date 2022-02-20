@@ -3,6 +3,7 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/NewsApp/app/src/main/res/drawable/ic_image_default_grey.xml" value="0.15185185185185185" />
         <entry key="..\:/NewsApp/app/src/main/res/layout/activity_main.xml" value="0.14791666666666667" />
         <entry key="..\:/NewsApp/app/src/main/res/layout/home_fragment.xml" value="0.1" />
         <entry key="..\:/NewsApp/app/src/main/res/layout/news_preview_fragment.xml" value="0.14791666666666667" />

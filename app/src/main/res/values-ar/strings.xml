@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">تطبيق الاخبار</string>
+    <string name="network_error_message">خطأ فى الشبكة !</string>
+    <string name="no_internet_message">برجاء الاتصال بالانترنت</string>
+    <string name="retry">حاول مرة اخرى</string>
+    <string name="timeout">نفذت مهلة المحاولة</string>
+</resources>
