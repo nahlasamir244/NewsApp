@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/homeFragment">
+
+    <fragment
+        android:id="@+id/homeFragment"
+        android:name="com.nahlasamir244.newsapp.presentation.home.HomeFragment"
+        android:label="HomeFragment" >
+        <action
+            android:id="@+id/action_homeFragment_to_newsPreviewFragment"
+            app:destination="@id/newsPreviewFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/newsPreviewFragment"
+        android:name="com.nahlasamir244.newsapp.presentation.news_preview.NewsPreviewFragment"
+        android:label="NewsPreviewFragment" >
+        <argument
+            android:name="news"
+            app:argType="com.nahlasamir244.newsapp.data.model.News" />
+    </fragment>
+</navigation>

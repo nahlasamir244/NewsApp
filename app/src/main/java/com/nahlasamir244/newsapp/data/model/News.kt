@@ -1,8 +1,10 @@
 package com.nahlasamir244.newsapp.data.model
 
+import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
+import kotlinx.android.parcel.Parcelize
 
-
+@Parcelize
 data class News(
 
     @SerializedName("slug_name") var slugName: String? = null,
@@ -30,4 +32,4 @@ data class News(
     @SerializedName("related_urls") var relatedUrls: String? = null,
     @SerializedName("multimedia") var multimedia: ArrayList<Multimedia> = arrayListOf()
 
-)
+): Parcelable
