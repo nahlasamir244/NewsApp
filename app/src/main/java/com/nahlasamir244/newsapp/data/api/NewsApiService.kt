@@ -8,7 +8,7 @@ import retrofit2.http.Path
 import retrofit2.http.Query
 
 interface NewsApiService {
-    @GET("/{source}/{section}.json")
+    @GET("/svc/news/v3/content/{source}/{section}.json")
     suspend fun getNewsList(
         @Path(value = "source", encoded = true) source: String = "all",
         @Path(value = "section", encoded = true) section: String = "all",

@@ -3,6 +3,7 @@ package com.nahlasamir244.newsapp.data.model
 import android.os.Parcelable
 import com.google.gson.annotations.SerializedName
 import kotlinx.android.parcel.Parcelize
+import kotlinx.android.parcel.RawValue
 
 @Parcelize
 data class News(
@@ -22,14 +23,6 @@ data class News(
     @SerializedName("created_date") var createdDate: String? = null,
     @SerializedName("published_date") var publishedDate: String? = null,
     @SerializedName("first_published_date") var firstPublishedDate: String? = null,
-    @SerializedName("material_type_facet") var materialTypeFacet: String? = null,
-    @SerializedName("kicker") var kicker: String? = null,
-    @SerializedName("subheadline") var subheadLine: String? = null,
-    @SerializedName("des_facet") var desFacet: ArrayList<String> = arrayListOf(),
-    @SerializedName("org_facet") var orgFacet: ArrayList<String> = arrayListOf(),
-    @SerializedName("per_facet") var perFacet: ArrayList<String> = arrayListOf(),
-    @SerializedName("geo_facet") var geoFacet: String? = null,
-    @SerializedName("related_urls") var relatedUrls: String? = null,
-    @SerializedName("multimedia") var multimedia: ArrayList<Multimedia> = arrayListOf()
+    @SerializedName("multimedia") var multimedia: @RawValue ArrayList<Multimedia> = arrayListOf()
 
 ): Parcelable

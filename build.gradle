@@ -29,6 +29,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        maven { url "https://www.jitpack.io" }
     }
     dependencies {
         classpath "com.android.tools.build:gradle:$gradleVersion"
@@ -37,7 +38,13 @@ buildscript {
         classpath "com.google.dagger:hilt-android-gradle-plugin:$hiltVersion"
     }
 }
-
+allprojects {
+    repositories {
+        google()
+        mavenCentral()
+        maven { url "https://www.jitpack.io" }
+    }
+}
 task clean(type: Delete) {
     delete rootProject.buildDir
 }

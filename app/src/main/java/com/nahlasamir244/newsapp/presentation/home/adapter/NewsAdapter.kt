@@ -5,12 +5,15 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
+import com.nahlasamir244.newsapp.R
 import com.nahlasamir244.newsapp.data.model.News
 import com.nahlasamir244.newsapp.databinding.ItemNewsBinding
+import com.nahlasamir244.newsapp.domain.LoadImage
 
 class NewsAdapter(
     private val newsAdapterHandler: NewsAdapterHandler
 ) : ListAdapter<News, NewsAdapter.NewsViewHolder>(NEWS_COMPARATOR) {
+    private val loadImage = LoadImage()
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): NewsViewHolder {
         val itemNewsBinding = ItemNewsBinding.inflate(
@@ -39,6 +42,11 @@ class NewsAdapter(
         fun bind(news: News) {
             itemNewsBinding.apply {
                 textViewNewsTitle.text = news.title
+                textViewNewsPublishedDate.text =  news.publishedDate
+                news.multimedia[0].url?.let {
+                    loadImage(imageViewNewsImage, it,
+                        R.drawable.ic_image_default_grey)
+                }
             }
         }
     }
