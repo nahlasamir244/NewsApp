@@ -1,20 +1,18 @@
 package com.nahlasamir244.newsapp.presentation.news_preview
 
-import androidx.lifecycle.ViewModelProvider
 import android.os.Bundle
-import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.fragment.app.Fragment
+import androidx.fragment.app.viewModels
 import com.nahlasamir244.newsapp.R
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class NewsPreviewFragment : Fragment() {
 
-    companion object {
-        fun newInstance() = NewsPreviewFragment()
-    }
-
-    private lateinit var viewModel: NewsPreviewViewModel
+    private val viewModel: NewsPreviewViewModel by viewModels()
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -23,10 +21,8 @@ class NewsPreviewFragment : Fragment() {
         return inflater.inflate(R.layout.news_preview_fragment, container, false)
     }
 
-    override fun onActivityCreated(savedInstanceState: Bundle?) {
-        super.onActivityCreated(savedInstanceState)
-        viewModel = ViewModelProvider(this).get(NewsPreviewViewModel::class.java)
-        // TODO: Use the ViewModel
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
     }
 
 }
