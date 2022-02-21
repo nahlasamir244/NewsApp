@@ -1,10 +1,13 @@
 package com.nahlasamir244.newsapp.utils.utils.helpers
 
 import android.widget.EditText
+import android.widget.ImageView
 import androidx.core.widget.doAfterTextChanged
 import androidx.databinding.BindingAdapter
 import androidx.databinding.InverseBindingAdapter
 import androidx.databinding.InverseBindingListener
+import com.nahlasamir244.newsapp.R
+import com.nahlasamir244.newsapp.domain.LoadImage
 
 @InverseBindingAdapter(attribute = "bindText")
 fun EditText.getTextValue(): String {
@@ -35,4 +38,10 @@ fun EditText.setListener(listener: InverseBindingListener?) {
     }
 }
 
-
+@BindingAdapter("imageUrl")
+fun loadImage(view: ImageView, url: String?) {
+    if (url != null) {
+        val loadPhoto = LoadImage()
+        loadPhoto(view, url, R.drawable.ic_image_default_grey)
+    }
+}
