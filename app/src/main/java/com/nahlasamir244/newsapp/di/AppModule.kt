@@ -31,7 +31,7 @@ object AppModule {
     @Provides
     @BaseUrl
     @Singleton
-    fun provideBaseUrl() = "https://api.nytimes.com/svc/news/v3/content/"
+    fun provideBaseUrl() = "https://api.nytimes.com/svc/news/v3/content"
 
     @Provides
     @Singleton
